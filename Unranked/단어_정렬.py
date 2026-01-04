@@ -1,0 +1,9 @@
+n = int(input())
+word_list = []
+for i in range(n):
+    word = input()
+    word_list.append((len(word), word)) #[(3, 'but'), (1, 'i'), (4, 'wont'), (8, 'hesitate'), (2, 'no'), (4, 'more'), (2, 'no'), (4, 'more'), (2, 'it'), (6, 'cannot'), (4, 'wait'), (2, 'im'), (5, 'yours')]
+    
+    word_list.sort()
+    for i in word_list:
+        print(i[1])
