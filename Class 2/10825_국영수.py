@@ -1,10 +1,9 @@
 n = int(input())
 scores = []
 for i in range(n):
-    name_list = []
-    scores = list(input().split())
+    name_list = input().split()
     scores.append(name_list)
-    scores.sort(key=lambda x: [x[1], x[2], x[3], x[0]])
+scores.sort(key=lambda x: [-int(x[1]), int(x[2]), -int(x[3]), x[0]])
     
 for score in scores:
     print(score[0])

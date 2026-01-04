@@ -1,0 +1,11 @@
+str = input()
+str_list = input().split()
+str1,str2 = input().split()
+a, b = map(int, input().split())
+num_list = list(map(int, input().split()))
+
+print(str)
+print(str_list)
+print(str1, str2)
+print(a, b)
+print(num_list)
