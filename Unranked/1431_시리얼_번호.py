@@ -1,11 +1,16 @@
+def get_sum(serial):
+    default = 0
+    for i in serial:
+        if i.isdigit():
+            default += int(i)
+    return default
+    
 n = int(input())
-def serial_code(num):
-    codes = []
-    for i in range(num):
-        code = input()
-        codes.append(code)
+serials = []
+
+for i in range(n):
+    serials.append(input())
+    serials.sort(key=lambda x: (len(x), get_sum(x), x))
     
-    codes = codes.sort(key=lambda x: len(x))
-    
-    print(codes)
-serial_code(n)
+for i in serials:
+    print(i)
