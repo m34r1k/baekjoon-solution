@@ -1,19 +1,19 @@
-n = int(input()) #1단계
-cards = [] #1단계
-for i in range(n): #1단계
-    card = int(input()) #1단계
-    found = False
-    for j in cards: #2단계
-        if j[0] == card: #3단계
-            found = True
-            j[1] += 1 #3단계
+n = int(input()) #step 1
+cards = [] #step 1
+for i in range(n): #step 1
+    card = int(input()) #step 1
+    found = False #step 5
+    for j in cards: #step 2
+        if j[0] == card: #step 3
+            found = True #step 5
+            j[1] += 1 #step 3
             
-            
-    if found == False: #리스트를 돌아봤을 때 같은 숫자가 없다면
-        cards.append([card, 1]) #2단계
+    # if 리스트를 돌아봤을 때 같은 숫자가 없다면: #step 4
+    if found == False: #리스트를 돌아봤을 때 같은 숫자가 없다면 #step 6
+        cards.append([card, 1]) #step 2
 
-cards.sort(key=lambda x: (-x[1], x[0]))
-print(cards[0][0])
+cards.sort(key=lambda x: (-x[1], x[0])) #step 7
+print(cards[0][0]) # step 8
     
 # step 1
 # 총 숫자의 갯수 입력받기
@@ -39,7 +39,13 @@ print(cards[0][0])
 
 # step 6
 # found를 통해서 '리스트를 돌아봤을 때 같은 숫자가 없다면'이라는 조건을 if문으로 구현함
-   
+
+#step 7
+#lambda를 이용하여 sort를 한다.
+#가장 개수가 많은 정수 -> 가장 작은 것
+
+#step 8:
+#print를 한다.
     
     
     
